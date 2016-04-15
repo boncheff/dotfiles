@@ -116,7 +116,7 @@ map <F2> :NERDTreeToggle<CR>
 inoremap jk <Esc>
 inoremap jj <Esc>
 " Ctrl+s saves changes
-nmap <C-S> :w<CR>
+nmap <F1> :w<CR>
 vmap <C-S> <Esc><C-S>gv
 imap <C-S> <Esc><C-S>gi
 "Easier navigation through split windows
