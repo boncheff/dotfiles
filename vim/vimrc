@@ -1,5 +1,6 @@
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+filetype off
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -23,6 +24,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
