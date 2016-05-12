@@ -81,6 +81,7 @@ let NERDSpaceDelims=1
 " Personal settings
 
 set shell=/bin/sh
+let g:go_fmt_command = "goimports"
 
 filetype on
 filetype plugin on

@@ -121,4 +121,4 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
 /etc/bash_completion.d/docker
 export EDITOR=vim;
 export GOPATH=$HOME/work
-export PATH="$GOPATH:$PATH:/usr/local/go/bin"
+export PATH="$GOPATH:$GOPATH/bin:$PATH:/usr/local/go/bin"
