@@ -142,3 +142,6 @@ nmap <Up> <Plug>GitGutterPrevHunk
 nmap <Down> <Plug>GitGutterNextHunk
 nmap <Right> <Plug>GitGutterPreviewHunk
 nmap <Left> <Plug>GitGutterRevertHunk
+
+" Map Escape to clear words highlighted during a search
+nnoremap <ESC> :nohlsearch<CR>
