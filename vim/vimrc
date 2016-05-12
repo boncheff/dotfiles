@@ -80,6 +80,8 @@ let NERDSpaceDelims=1
 
 " Personal settings
 
+set shell=/bin/sh
+
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -118,7 +120,6 @@ map <F2> :NERDTreeToggle<CR>
 " Exit insert mode with jk/jj
 inoremap jk <Esc>
 inoremap jj <Esc>
-" Ctrl+s saves changes
 nmap <F1> :w<CR>
 vmap <C-S> <Esc><C-S>gv
 imap <C-S> <Esc><C-S>gi
@@ -127,6 +128,9 @@ nnoremap <C-J> <C-W><Down>
 nnoremap <C-K> <C-W><Up>
 nnoremap <C-L> <C-W><Right>
 nnoremap <C-H> <C-W><Left>
+
+"execute go run
+nmap <F9>  :GoRun <CR>
 
 " Old habits never die
 nnoremap <Up> <NOP>
