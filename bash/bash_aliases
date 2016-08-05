@@ -1,33 +1,22 @@
-# Git aliases
-alias gpl     =     "git pull"
-alias gb      =     "git branch"
-alias gpsh    =     "git push"
-alias gc      =     "git commit"
-alias gs      =     "git status"
-alias ga      =     "git add -u"
-alias gf      =     "git fetch"
-alias gd      =     "git diff"
-
-# Docker aliases
-alias drm   =   "docker rm -f"
-alias dps   =   "docker ps"
-alias dpsa  =   "docker ps -a"
-
-# Change Directory aliases
-alias z      =     "cd /repos/zoon"
-alias dev    =     "cd /repos/spark && source devenv/bin/activate"
-alias lab    =     "cd /repos/env/deploy"
-alias orb    =     "cd /repos/orbit"
-alias v      =     "cd /repos/vader"
-alias f      =     "cd /repos/franz"
-
-# Python devenv aliases
-alias d   =   "deactivate"
-alias a   =   "source /repos/spark/devenv/bin/activate"
-
-# Misc aliases
-alias kap     =     "killall -9 python"
-alias ccat    =     "pygmentize -g"
-alias run     =     "make run_server"
-alias tmuxex  =     "export TERM=screen-256color-bce"
-alias ka      =     "sudo kill -9"
+alias gpl="git pull"
+alias gb="git branch"
+alias gpsh="git push"
+alias gc="git commit"
+alias gs="git status"
+alias ga="git add -u"
+alias gf="git fetch"
+alias kap="killall -9 python"
+alias ccat='pygmentize -g'
+alias run="make run_server"
+alias dev='cd /repos/spark && source devenv/bin/activate'
+alias lab='cd /repos/env/deploy'
+alias tmuxex='export TERM=screen-256color-bce'
+alias ka="sudo kill -9"
+alias d="deactivate"
+alias a="source /repos/spark/devenv/bin/activate"
+alias orb="cd /repos/orbit"
+alias drm="docker rm -f"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias v="cd /repos/vader"
+alias gd="git diff"

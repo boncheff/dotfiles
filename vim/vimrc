@@ -31,7 +31,6 @@ call vundle#end()
 
 " Plugins settings
 " Powerline setup for MacVim/ GVim
-
 set laststatus=2
 if has("gui_running")
     set lines=999 columns=999
