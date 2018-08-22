@@ -149,4 +149,4 @@ nnoremap <C-c> :bn\|bd #<CR>
 nmap <Up> <Plug>GitGutterPrevHunk
 nmap <Down> <Plug>GitGutterNextHunk
 nmap <Right> <Plug>GitGutterPreviewHunk
-nmap <Left> <Plug>GitGutterRevertHunk
+nmap <Left> <Plug>GitGutterUndoHunk
