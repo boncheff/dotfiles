@@ -29,6 +29,33 @@ Plugin 'fatih/vim-go'
 
 call vundle#end()
 
+" Pymode
+let g:pymode_python = 'python'
+let g:pymode_rope = 0
+let g:pymode_rope_goto_definition_cmd = 'vnew'
+let g:pymode_folding = 0
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe']
+" C0111 - Missing docstrings
+" W0703 - Cathing too general exception
+let g:pymode_lint_ignore = [ "C0111", "W0703", ]
+
+" vim-go
+let g:go_auto_type_info = 0
+let g:go_addtags_transform = "snakecase"
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_play_open_browser = 1
+let g:go_dispatch_enabled = 1
+let g:go_def_reuse_buffer = 0
+let g:go_metalinter_autosave = 1
+
 " Plugins settings
 " Powerline setup for MacVim/ GVim
 set laststatus=2
@@ -53,6 +80,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " Airline
 let airline_enable_branch = 0
 let g:airline_section_b= ""
+let g:go_version_warning = 0
 
 " Pymode
 let g:pymode_rope = 0
