@@ -134,7 +134,9 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
 /etc/bash_completion.d/docker
 export EDITOR=vim;
 export GOPATH=$HOME/work
-export PATH="$GOPATH:$GOPATH/bin:$PATH:/usr/local/go/bin"
+export PATH="$GOPATH:$GOPATH/bin:$PATH:/usr/local/go/bin:/repos/env/utils:/repos/env/deploy"
 
 export NVM_DIR="/home/filcho/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+complete -C /home/filcho/vault vault

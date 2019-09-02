@@ -4,6 +4,7 @@ filetype off
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
@@ -11,17 +12,15 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'The-NERD-Commenter'
 
-Plugin 'Yggdroot/indentLine'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'tpope/vim-surround'
-Plugin 'ervandew/supertab'
+Plugin 'Yggdroot/indentLine' " A vim plugin to display the indention levels with thin vertical lines
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 
-Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
@@ -67,8 +66,9 @@ if has("gui_running")
     elseif s:uname == "Darwin\n"
         set guifont=Inconsolata\ for\ Powerline:h15
     endif
-else
-    set term=xterm-256color
+elseif $TERM == 'xterm-256color'
+    set t_Co=256
+    colorscheme desert256
 endif
 
 " YAML
@@ -87,7 +87,7 @@ let g:pymode_rope = 0
 let g:pymode_folding = 0
 let g:pymode_lint_unmodified = 1
 let g:pymode_lint_checkers = ['pep8', 'pyflakes']
-au BufWriteCmd *.py write || :PymodeLint
+autocmd BufWriteCmd *.py write || :PymodeLint
 
 " CtrlP Settings
 let g:ctrlp_max_height = 30
@@ -130,6 +130,7 @@ set cursorline
 set tabstop=4 " Number of space chars inserted
 set shiftwidth=4 " Number of space chars inserted for identation
 set expandtab " Spaces instead of tabs
+
 " Use 2 spaces instead of tabs for HTML files
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
@@ -138,28 +139,33 @@ set nu " Line numbers
 set hlsearch " Highlight all search matches
 set incsearch " Move cursor to the matched string, while typing
 set ignorecase
+
+set backspace=indent,eol,start " backspace doesn't work in insert mode
+
 " Temporary turn off hlsearch
 nnoremap <silent> <leader>l :noh<CR>
+
 " Fix identation when pasting in Insert mode
 set pastetoggle=<F3>
+
 " Remap Ctrl+v to paste text in insert mode
 inoremap <C-v> <F3><C-r>+<F3>
+
 " Toggle NERDTree hotkey
 map <F2> :NERDTreeToggle<CR>
+
 " Exit insert mode with jk/jj
 inoremap jk <Esc>
 inoremap jj <Esc>
 nmap <F1> :w<CR>
 vmap <C-S> <Esc><C-S>gv
 imap <C-S> <Esc><C-S>gi
+
 "Easier navigation through split windows
 nnoremap <C-J> <C-W><Down>
 nnoremap <C-K> <C-W><Up>
 nnoremap <C-L> <C-W><Right>
 nnoremap <C-H> <C-W><Left>
-
-"execute go run
-nmap <F9>  :GoRun <CR>
 
 " Old habits never die
 nnoremap <Up> <NOP>
